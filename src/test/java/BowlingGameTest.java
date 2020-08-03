@@ -39,4 +39,19 @@ public class BowlingGameTest {
         int result=BowlingGame.calculate(frames);
         assertEquals(result,146);
     }
+
+    @Test
+    void should_input_normal() {
+        FrameScore[] frames=new FrameScore[11];
+        for(int i=0;i<5;i++){
+            frames[i]=new FrameScore(3,5);
+        }
+        for(int i=5;i<9;i++){
+            frames[i]=new FrameScore(5,9);
+        }
+        frames[9]=new FrameScore(10);
+        frames[10]=new FrameScore(10,10);
+        int result=BowlingGame.calculate(frames);
+        assertEquals(result,126);
+    }
 }
