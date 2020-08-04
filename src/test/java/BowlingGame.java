@@ -45,7 +45,7 @@ public class BowlingGame {
                      }
                      else totalScore += frames[i + 1].firstScore + frames[i + 1].secondScore + 10;
                  }
-                 else if(frames[i].firstScore+frames[i].secondScore==10){
+                 else if(frames[i].firstScore+frames[i].secondScore>=10){
                      totalScore += frames[i+1].firstScore+10;
                  }else {
                      totalScore += frames[i].firstScore+frames[i].secondScore;
